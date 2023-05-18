@@ -16,7 +16,7 @@ class Node {
 //recursive
 bool linkedListFind(Node* head, std::string target) 
 {
-  if (head != nullptr) return false;
+  if (head == nullptr) return false;
   else if (head->val ==target) return true;
   else linkedListFind(head->next,target);  
 }
