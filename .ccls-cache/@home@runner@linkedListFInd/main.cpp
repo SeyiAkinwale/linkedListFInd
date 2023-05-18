@@ -13,16 +13,12 @@ class Node {
 };
 
 
-
+//recursive
 bool linkedListFind(Node* head, std::string target) 
 {
-  Node * current = head;
-  while (current != nullptr)
-  {
-    if(current->val==target) return true;
-    current=current->next;
-  }
-  return false;
+  if (head != nullptr) return false;
+  else if (head->val ==target) return true;
+  else linkedListFind(head->next,target);  
 }
 
 int main()
@@ -30,7 +26,7 @@ int main()
   Node a("A");
   Node b("B");
   a.next=&b;
-  std::cout<<linkedListFind(&a, "D");
+  std::cout<<linkedListFind(&a, "A");
 
   return 0;
 }
