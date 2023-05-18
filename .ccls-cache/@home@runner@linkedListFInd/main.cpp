@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 class Node {
   public:
@@ -29,7 +30,7 @@ int main()
   Node a("A");
   Node b("B");
   a.next=&b;
-  linkedListFind(a, "A");
+  std::cout<<linkedListFind(&a, "A");
 
   return 0;
 }
