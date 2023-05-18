@@ -30,7 +30,7 @@ int main()
   Node a("A");
   Node b("B");
   a.next=&b;
-  std::cout<<linkedListFind(&a, "B");
+  std::cout<<linkedListFind(&a, "D");
 
   return 0;
 }
